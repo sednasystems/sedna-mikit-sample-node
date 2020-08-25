@@ -26,6 +26,30 @@ will be rendered within the SEDNA UI. If the `blocks` array of the
 response is left empty, then SEDNA will display a "completed" screen to
 the user and allow them to move on.
 
+## How to Use
+
+First run an `npm install`.
+
+And then run `node app.js` in one terminal window.
+
+In a different terminal window, run any of these four npm scripts which
+simulate different requests from SEDNA:
+
+1. `npm run unauthenticatedRequest` will call the API with an invalid
+API key, and then the API will respond with a 401.
+1. `npm run initialRequest` will call the API simulating the user's
+first open of the app, and then the API will respond with an empty
+form.
+1. `npm run errorRequest` will call the API simulating the user's
+submission of the form, but with one of the values failing a server-side
+validation check. In this instance, the API will respond with the entire
+form but will also manually add an error message.
+1. `npm run successRequest` will call the API simulating the user's
+submission of the form. In this case, the user's form input was valid
+and the third-party API responded successfully, so the API responds with
+an empty blocks array which is rendered as a success screen in SEDNA.
+
+
 ## Interactive Components
 The response returned by the app might include interactive component.
 Such components are described here.

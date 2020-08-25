@@ -1,5 +1,16 @@
 {
   "name": "sedna-mikit-sample-node",
   "description": "A sample application written in node.js showing how to interact with SEDNA's Message Interactions API.",
-  "author": "Alex Crooks <alex@alexcrooks.com>"
+  "author": "Alex Crooks <alex@alexcrooks.com>",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "uuid": "^8.3.0"
+  },
+  "scripts": {
+    "unauthenticatedRequest": "node sedna.js",
+    "initialRequest": "env IS_AUTHENTICATED=1 node sedna.js",
+    "errorRequest": "env IS_AUTHENTICATED=1 IS_SUBMIT=1 IS_ERROR=1 node sedna.js",
+    "successRequest": "env IS_AUTHENTICATED=1 IS_SUBMIT=1 node sedna.js"
+  }
 }
