@@ -139,3 +139,7 @@ Send an email to product@sedna.com with the following details:
 - Endpoint
 - API key
 - Plain text error message to display to the user in the event the app fails to respond successfully 
+
+## What does an app look like in SEDNA?
+
+![A rendered app in SEDNA](example.png "A rendered app in SEDNA")
