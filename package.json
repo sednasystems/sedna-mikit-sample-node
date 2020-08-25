@@ -1,0 +1,5 @@
+{
+  "name": "sedna-mikit-sample-node",
+  "description": "A sample application written in node.js showing how to interact with SEDNA's Message Interactions API.",
+  "author": "Alex Crooks <alex@alexcrooks.com>"
+}
