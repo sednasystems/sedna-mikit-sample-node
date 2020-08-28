@@ -1,4 +1,5 @@
 # sedna-mikit-sample-node
+
 MIKit is an API written by [SEDNA](https://www.sedna.com) that allows
 users to interact with third-party products from directly inside the
 SEDNA user interface. As this API involves more than a basic HTTP
@@ -18,7 +19,7 @@ response is outlined
 [here](https://app.sednanetwork.com/mikit/2020-07-07/response.schema.json)
 for the response envelope and
 [here](https://app.sednanetwork.com/mikit/2020-07-07/definitions.schema.json)
-for an overview of all of the supported UI components in SEDNA, which
+for an overview of all the supported UI components in SEDNA, which
 are passed in the `blocks` array.
 
 Once the response is returned to SEDNA, any of the provided components
@@ -30,31 +31,32 @@ the user and allow them to move on.
 
 First run an `npm install`.
 
-And then run `node app.js` in one terminal window.
+And then run `node src/app.js` in one terminal window.
 
 In a different terminal window, run any of these four npm scripts which
 simulate different requests from SEDNA:
 
 1. `npm run unauthenticatedRequest` will call the API with an invalid
-API key, and then the API will respond with a 401.
+   API key, and then the API will respond with a 401.
 1. `npm run initialRequest` will call the API simulating the user's
-first open of the app, and then the API will respond with an empty
-form.
+   first open of the app, and then the API will respond with an empty
+   form.
 1. `npm run errorRequest` will call the API simulating the user's
-submission of the form, but with one of the values failing a server-side
-validation check. In this instance, the API will respond with the entire
-form but will also manually add an error message.
+   submission of the form, but with one of the values failing a server-side
+   validation check. In this instance, the API will respond with the entire
+   form but will also manually add an error message.
 1. `npm run successRequest` will call the API simulating the user's
-submission of the form. In this case, the user's form input was valid
-and the third-party API responded successfully, so the API responds with
-an empty blocks array which is rendered as a success screen in SEDNA.
-
+   submission of the form. In this case, the user's form input was valid
+   and the third-party API responded successfully, so the API responds with
+   an empty blocks array which is rendered as a success screen in SEDNA.
 
 ## Interactive Components
+
 The response returned by the app might include interactive component.
 Such components are described here.
 
 ### `button` Component
+
 When the button component is clicked, SEDNA will call the app endpoint
 in the MIKit.request format described above, but the `blocks` array will
 be populated outlining the current state of the user interface. For
@@ -138,7 +140,7 @@ Send an email to product@sedna.com with the following details:
 - SVG logo
 - Endpoint
 - API key
-- Plain text error message to display to the user in the event the app fails to respond successfully 
+- Plain text error message to display to the user in the event the app fails to respond successfully
 
 ## What does an app look like in SEDNA?
 

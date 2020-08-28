@@ -4,13 +4,15 @@
   "author": "Alex Crooks <alex@alexcrooks.com>",
   "dependencies": {
     "express": "^4.17.1",
-    "lodash": "^4.17.20",
     "uuid": "^8.3.0"
   },
   "scripts": {
-    "unauthenticatedRequest": "node sedna.js",
-    "initialRequest": "env IS_AUTHENTICATED=1 node sedna.js",
-    "errorRequest": "env IS_AUTHENTICATED=1 IS_SUBMIT=1 IS_ERROR=1 node sedna.js",
-    "successRequest": "env IS_AUTHENTICATED=1 IS_SUBMIT=1 node sedna.js"
+    "unauthenticatedRequest": "node src/sedna.js",
+    "initialRequest": "IS_AUTHENTICATED=1 node src/sedna.js",
+    "errorRequest": "IS_AUTHENTICATED=1 IS_SUBMIT=1 IS_ERROR=1 node src/sedna.js",
+    "successRequest": "IS_AUTHENTICATED=1 IS_SUBMIT=1 node src/sedna.js"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.1"
   }
 }
