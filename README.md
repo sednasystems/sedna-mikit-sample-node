@@ -119,10 +119,11 @@ in line with the user input.
 
 ## Authentication
 
-At the moment, SEDNA will only call APIs that support Bearer
-authentication. Specifically, SEDNA will call an app endpoint with the
+SEDNA supports calling APIs that support Bearer authentication.
+Specifically, SEDNA will call an app endpoint with the
 header `Authorization: Bearer abc123`, where `abc123` is the app's
-pre-configured API token.
+pre-configured API token. To request other authentication strategies,
+you can contact product@sedna.com.
 
 ## Questions
 
