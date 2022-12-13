@@ -3,7 +3,7 @@
   "description": "A sample application written in node.js showing how to interact with SEDNA's Message Interactions API.",
   "author": "Alex Crooks <alex@alexcrooks.com>",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "uuid": "^8.3.0"
   },
   "scripts": {
